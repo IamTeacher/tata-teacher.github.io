@@ -1,16 +1,74 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8">
-<title>Професії майбутнього</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flex_transition</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			display: flex;
+			margin-top: 40px;
+		}
+		.photo {
+			height: 300px;
+			box-shadow: 2px 2px 15px black;
+			margin: 1px;
+			flex-basis: 12.5%;
+		}
+		.photo:hover {
+			flex: 1 1 400px;
+			box-shadow: 2px 2px 35px red;
+			transition: 1s;
+		}
+		.photo:nth-child(1) {
+			background-image: url(http://lorempixel.com/400/300/cats/1);
+		}
+		.photo:nth-child(2) {
+			background-image: url(http://lorempixel.com/400/300/cats/2);
+		}
+		.photo:nth-child(3) {
+			background-image: url(http://lorempixel.com/400/300/cats/3);
+		}
+		.photo:nth-child(4) {
+			background-image: url(http://lorempixel.com/400/300/cats/4);
+		}
+		.photo:nth-child(5) {
+			background-image: url(http://lorempixel.com/400/300/cats/5);
+		}
+		.photo:nth-child(6) {
+			background-image: url(http://lorempixel.com/400/300/cats/6);
+		}
+		.photo:nth-child(7) {
+			background-image: url(http://lorempixel.com/400/300/cats/7);
+		}
+		.photo:nth-child(8) {
+			background-image: url(http://lorempixel.com/400/300/cats/8);
+		}
+		a { background: lightblue; color: blue; padding: 10px; text-decoration: none; 
+			transition: background 1s ease-in 0.5s, font-size 1s;
+	}
+
+		a:hover { background: blue; color: white; text-decoration: underline; 
+			font-size: 2em; 
+			transition: background 1s ease-in 0.5s, font-size 1s; }
+	</style>
 </head>
-<frameset cols="200,*,15%">
-<frame name="menu" src="nav.html"></frame>
-<frameset rows="50,*,50">
-	<frame name="nazva" src="prof1.html"></frame>
-	<frame name="main" src="prof2.html"></frame>
-	<frame name="avtor" src="prof3.html"></frame>
-</frameset>
-<frame name="dz" src="prof4.html"></frame>
-</frameset>
+<body>
+<div class="container">
+	<div class="photo"></div>
+	<div class="photo"></div>
+	<div class="photo"></div>
+	<div class="photo"></div>
+	<div class="photo"></div>
+	<div class="photo"></div>
+	<div class="photo"></div>
+	<div class="photo"></div>
+
+</div>
+<a href="#">LoremPixel</a>
+</body>
 </html>
